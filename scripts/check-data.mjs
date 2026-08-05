@@ -4,6 +4,7 @@ const PLATFORMS = new Set(["linkedin", "x", "blog", "podcast"]);
 const CATEGORIES = new Set(["event", "endorsement", "maintainer", "community", "press"]);
 
 const { meta, posts } = JSON.parse(readFileSync("data/posts.json", "utf8"));
+const impact = JSON.parse(readFileSync("data/impact.json", "utf8"));
 const errors = [];
 
 if (!meta?.title || !meta?.release_date) errors.push("meta.title/release_date missing");
@@ -24,5 +25,14 @@ for (const p of posts) {
   }
 }
 
+if (!impact.meta?.as_of || !/^https:\/\//.test(impact.meta?.source ?? "")) {
+  errors.push("impact meta.as_of/source missing");
+}
+if (impact.metrics?.length !== 7) errors.push("impact must contain seven headline metrics");
+if (impact.events?.length !== 6) errors.push("impact must contain six event cities");
+if (impact.channels?.reduce((sum, channel) => sum + channel.posts, 0) !== 247) {
+  errors.push("impact channel post totals must equal 247");
+}
+
 if (errors.length) { console.error(errors.join("\n")); process.exit(1); }
-console.log(`OK: ${posts.length} posts`);
+console.log(`OK: ${posts.length} stories, ${impact.metrics.length} metrics, ${impact.events.length} cities`);

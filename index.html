@@ -3,78 +3,177 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MCP Launch Week: the feed</title>
-  <meta name="description" content="The posts, blogs, and podcasts the community created for the MCP release of July 28, 2026.">
+  <title>MCP 7·28: from launch to impact</title>
+  <meta name="description" content="Seven events, 1,396 registrations, and a community response to the biggest MCP specification update yet.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MCP 7·28: from launch to impact">
+  <meta property="og:description" content="Seven events. 1,396 registrations. 475+ attendees. See how the MCP community moved.">
+  <meta property="og:image" content="https://mlopscommunity.github.io/mcp-launch-feed/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MCP 7·28: from launch to impact">
+  <meta name="twitter:description" content="Seven events. 1,396 registrations. 475+ attendees. See how the MCP community moved.">
+  <meta name="twitter:image" content="https://mlopscommunity.github.io/mcp-launch-feed/assets/og.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/aaif-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <a href="https://aaif.io" aria-label="Agentic AI Foundation home">
       <img src="assets/aaif-logo.svg" alt="Agentic AI Foundation" class="logo">
     </a>
-    <div class="header-copy">
-      <p class="eyebrow">Community archive · July 28, 2026</p>
-      <h1>MCP Launch Week: the feed</h1>
-    </div>
+    <nav class="site-nav" aria-label="Page sections">
+      <a href="#impact">Impact</a>
+      <a href="#events">Events</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#next">What's next</a>
+    </nav>
+    <span class="as-of">As of Aug 4, 2026</span>
   </header>
 
-  <main class="layout">
-    <aside class="panel panel-left">
-      <p class="panel-kicker">What shipped</p>
-      <h2>The release</h2>
-      <p>The 2026-07-28 specification makes stateless operation the default shape of modern MCP. Each request carries the protocol metadata a server needs, so infrastructure can route work without relying on session affinity.</p>
-      <ul class="release-list">
-        <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Stateless protocol core</a> for simpler scaling behind gateways and load balancers.</li>
-        <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Multi round-trip requests</a> for elicitation and other interactive flows.</li>
-        <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">First-class extensions</a> with explicit capability negotiation.</li>
-        <li><a href="https://modelcontextprotocol.io/specification/2026-07-28/changelog">Routing and cache metadata</a> that works with ordinary web infrastructure.</li>
-      </ul>
-      <div class="source-links" aria-label="Release sources">
-        <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Release post</a>
-        <a href="https://modelcontextprotocol.io/specification/2026-07-28">Specification</a>
-        <a href="https://aaif.io/blog/mcp-is-growing-up/">AAIF analysis</a>
-      </div>
-    </aside>
-
-    <section class="feed-col" aria-labelledby="feed-heading">
-      <div class="feed-heading-row">
-        <div>
-          <p class="panel-kicker">From the community</p>
-          <h2 id="feed-heading">Launch coverage</h2>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">MCP specification · 2026-07-28</p>
+        <h1 id="hero-title">The release shipped.<br><em>The community moved.</em></h1>
+        <p class="hero-lede">The largest Model Context Protocol update yet became more than a changelog: seven gatherings, hundreds of practitioners, a global ambassador effort, and an organic wave of technical explanation.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#impact">See the impact</a>
+          <a class="button" href="#feed-heading">Explore the launch feed</a>
         </div>
-        <span id="result-count" class="result-count" aria-live="polite"></span>
       </div>
-      <nav id="filters" aria-label="Filter posts">
-        <button data-filter="all" class="chip active" type="button">All</button>
-        <button data-filter="linkedin" class="chip" type="button">LinkedIn</button>
-        <button data-filter="x" class="chip" type="button">X</button>
-        <button data-filter="press" class="chip" type="button">Blogs and press</button>
-        <button data-filter="event" class="chip" type="button">Events</button>
-      </nav>
-      <div id="feed" aria-live="polite"></div>
+      <div class="campaign-model" aria-label="The campaign connected events, technical depth, and amplification">
+        <p class="model-label">One reinforcing campaign</p>
+        <div class="model-ring model-ring-one"><span>01</span><strong>Events</strong><small>real-world signal</small></div>
+        <div class="model-ring model-ring-two"><span>02</span><strong>Depth</strong><small>technical trust</small></div>
+        <div class="model-ring model-ring-three"><span>03</span><strong>Reach</strong><small>community lift</small></div>
+      </div>
     </section>
 
-    <aside class="panel panel-right">
-      <p class="panel-kicker">One week, many voices</p>
-      <h2>How the community showed up</h2>
-      <div class="stats">
-        <div class="stat"><span id="stat-posts">0</span><label>posts and articles</label></div>
-        <div class="stat"><span id="stat-cities">5</span><label>cities with release events</label></div>
-        <div class="stat"><span id="stat-press">0</span><label>blogs, podcasts, and press</label></div>
+    <section id="impact" class="section section-impact" aria-labelledby="impact-title">
+      <div class="section-intro">
+        <p class="eyebrow">The first-week readout</p>
+        <h2 id="impact-title">A launch measured in participation, not just posts.</h2>
+        <p>Phase 1 paired in-person moments with practical guidance and community distribution. Each layer made the next one more useful.</p>
       </div>
-      <ol class="timeline">
-        <li><time>Jul 27</time><span>Pre-launch notes and event invitations</span></li>
-        <li><time>Jul 28</time><span>The specification and SDKs ship</span></li>
-        <li><time>Jul 28–29</time><span>Events in San Francisco, Seattle, New York, Amsterdam, and London</span></li>
-        <li><time>Jul 31+</time><span>Implementation notes and analyst follow-ups</span></li>
-      </ol>
-      <p class="tagline">Agentic AI Foundation: where the agentic stack is being built. <a href="https://aaif.io">aaif.io</a></p>
-    </aside>
+      <div id="impact-metrics" class="metric-grid" aria-live="polite"></div>
+      <p class="method-note">Campaign figures cover different reporting windows and are presented separately. <a id="recap-source" href="#">Read the campaign recap ↗</a></p>
+    </section>
+
+    <section class="section campaign-layers" aria-labelledby="layers-title">
+      <div class="section-intro section-intro-small">
+        <p class="eyebrow">How it worked</p>
+        <h2 id="layers-title">Three layers. One community signal.</h2>
+      </div>
+      <div class="layer-grid">
+        <article>
+          <span>01 / Gather</span>
+          <h3>Events created energy</h3>
+          <p>Release parties put maintainers, platform teams and developers in the same room as the specification landed.</p>
+        </article>
+        <article>
+          <span>02 / Explain</span>
+          <h3>Practitioners built trust</h3>
+          <p>Migration guides, authorization walkthroughs and production stories translated the redesign into decisions teams could make.</p>
+        </article>
+        <article>
+          <span>03 / Amplify</span>
+          <h3>The network carried it</h3>
+          <p>Ambassadors, companies, press and independent voices extended the story well beyond AAIF's owned channels.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="events" class="section section-events" aria-labelledby="events-title">
+      <div class="section-intro split-intro">
+        <div>
+          <p class="eyebrow">Seven events · six cities</p>
+          <h2 id="events-title">The protocol landed around the world.</h2>
+        </div>
+        <p>Two continents, eleven partner organizations, and local rooms shaped by the builders who will put the new specification into production.</p>
+      </div>
+      <div id="event-grid" class="event-grid"></div>
+    </section>
+
+    <section id="evidence" class="section section-evidence" aria-labelledby="evidence-title">
+      <div class="section-intro split-intro">
+        <div>
+          <p class="eyebrow">Earned reach</p>
+          <h2 id="evidence-title">The story travelled on its own.</h2>
+        </div>
+        <p><strong>40 independent posts</strong> were tracked between the evening before launch and Thursday midday—organic amplification on top of the campaign.</p>
+      </div>
+
+      <div class="evidence-layout">
+        <div>
+          <h3 class="subheading">Coverage across the stack</h3>
+          <div id="press-grid" class="press-grid"></div>
+        </div>
+        <div class="channel-panel">
+          <div class="channel-panel-head">
+            <div>
+              <p class="eyebrow">Owned + ambassador distribution</p>
+              <h3>Every channel played a different role.</h3>
+            </div>
+            <span>Jul 1–Aug 4</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Channel</th><th>Posts</th><th>Impressions</th><th>Engagements</th><th>Role</th></tr></thead>
+              <tbody id="channel-table"></tbody>
+            </table>
+          </div>
+          <p class="channel-note">LinkedIn delivered depth with the enterprise and platform audience; X supplied volume. Bluesky remained a smaller community channel. Impression reporting is not available from Bluesky.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feed-section" aria-labelledby="feed-heading">
+      <div class="section-intro split-intro">
+        <div>
+          <p class="eyebrow">The evidence layer</p>
+          <h2 id="feed-heading">The launch feed</h2>
+        </div>
+        <p>Explore the community posts, technical explanations, event notes, and independent coverage behind the numbers.</p>
+      </div>
+      <div class="feed-tools">
+        <nav id="filters" aria-label="Filter launch coverage">
+          <button data-filter="all" class="chip active" type="button" aria-pressed="true">All</button>
+          <button data-filter="event" class="chip" type="button" aria-pressed="false">Events</button>
+          <button data-filter="technical" class="chip" type="button" aria-pressed="false">Technical depth</button>
+          <button data-filter="community" class="chip" type="button" aria-pressed="false">Community voices</button>
+          <button data-filter="press" class="chip" type="button" aria-pressed="false">Press + blogs</button>
+        </nav>
+        <span id="result-count" class="result-count" aria-live="polite"></span>
+      </div>
+      <div id="feed" class="feed-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="next" class="section section-next" aria-labelledby="next-title">
+      <div class="next-heading">
+        <p class="eyebrow">Phase 2 · through September</p>
+        <h2 id="next-title">Attention was the opening move.<br><em>Adoption is the work ahead.</em></h2>
+        <p>The next phase shifts from announcing what changed to showing how teams migrate, operate, secure, and adapt MCP in specific environments.</p>
+      </div>
+      <div id="phase2-grid" class="phase2-grid"></div>
+    </section>
   </main>
+
+  <footer>
+    <div>
+      <img src="assets/aaif-logo.svg" alt="Agentic AI Foundation" class="footer-logo">
+      <p>Where the agentic stack is being built.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://aaif.io">aaif.io ↗</a>
+      <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Release post ↗</a>
+      <a href="https://modelcontextprotocol.io/specification/2026-07-28">Specification ↗</a>
+    </div>
+  </footer>
 
   <template id="card-template">
     <article class="card">

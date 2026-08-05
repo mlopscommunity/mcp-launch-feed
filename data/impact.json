@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "MCP 2026-07-28 launch impact",
+    "as_of": "2026-08-04",
+    "source": "https://docs.google.com/document/d/1FKb773WJKtDLcSMAFaLzbWKcGN_0t1cHw_LmY7_b6g0/edit"
+  },
+  "metrics": [
+    { "value": "7", "label": "release events", "detail": "across six cities" },
+    { "value": "1,396", "label": "registrations", "detail": "across every event" },
+    { "value": "475+", "label": "confirmed attendees", "detail": "from reported check-ins" },
+    { "value": "~100", "label": "ambassador commitments", "detail": "content, talks and workshops" },
+    { "value": "10", "label": "pieces live", "detail": "in the first 72 hours" },
+    { "value": "40", "label": "organic third-party posts", "detail": "tracked through July 30" },
+    { "value": "247", "label": "campaign posts", "detail": "July 1 through August 4" }
+  ],
+  "events": [
+    { "city": "London", "venue": "Vonage", "registrations": 164, "attendees": "102", "note": "The protocol's co-creator joined maintainers and platform leaders." },
+    { "city": "New York", "venue": "Datadog", "registrations": 278, "attendees": "150+", "note": "Talks moved from the new core to operating and authorizing MCP at scale." },
+    { "city": "Amsterdam", "venue": "AI House", "registrations": 332, "attendees": "134", "note": "Maintainers and production teams brought the migration story to Europe." },
+    { "city": "Austin", "venue": "Coder", "registrations": 83, "attendees": "30", "note": "Builders from Coder, AWS, Bitmovin and Cisco shared the room." },
+    { "city": "Seattle", "venue": "Microsoft Reactor", "registrations": 126, "attendees": "60+", "note": "Maintainers and practitioners focused on production-ready systems." },
+    { "city": "San Francisco", "venue": "Arcade.dev, MCPJam & Manufact", "registrations": 413, "attendees": null, "note": "Two sold-out launch gatherings turned the release into a community milestone." }
+  ],
+  "channels": [
+    { "name": "LinkedIn", "posts": 82, "impressions": "131,735", "engagements": "6,438", "role": "Depth + enterprise audience" },
+    { "name": "X", "posts": 93, "impressions": "~66,000", "engagements": "2,814", "role": "High-volume reach engine" },
+    { "name": "Bluesky", "posts": 72, "impressions": "Not available", "engagements": "47", "role": "Community maintenance" }
+  ],
+  "press": [
+    { "name": "VentureBeat", "description": "Anchored the enterprise-readiness, governance and Internet of Agents narrative." },
+    { "name": "Ars Technica", "description": "Brought the protocol redesign to a broad technical readership." },
+    { "name": "The Register", "description": "Extended the story across enterprise IT and open source audiences." },
+    { "name": "Latent Space", "description": "Carried the release into the AI engineering community." },
+    { "name": "Ben's Bites + TLDR", "description": "Put the milestone into daily technology briefings." },
+    { "name": "Analysts", "description": "Follow-on interest included governance and stateless-architecture commentary." }
+  ],
+  "phase2": [
+    { "number": "01", "title": "Migration diaries", "description": "Follow teams as they move real servers, gateways and clients onto the July 28 specification." },
+    { "number": "02", "title": "Production case studies", "description": "Turn operational lessons into reusable guidance for scaling, observability and authorization." },
+    { "number": "03", "title": "Reference guidance", "description": "Publish deeper material on auth, AWS architecture, compliance and human-in-the-loop agents." },
+    { "number": "04", "title": "Vertical stories", "description": "Translate the protocol changes for finance, retail, travel, AdTech, infrastructure and media." }
+  ]
+}
