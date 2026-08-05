@@ -56,7 +56,10 @@ function renderImpact(impact) {
 
   document.getElementById("press-grid").replaceChildren(...impact.press.map(item => {
     const article = document.createElement("article");
-    article.innerHTML = `<h4>${item.name}</h4><p>${item.description}</p>`;
+    const name = item.url
+      ? `<a href="${item.url}" target="_blank" rel="noopener">${item.name} <span aria-hidden="true">↗</span></a>`
+      : item.name;
+    article.innerHTML = `<h4>${name}</h4><p>${item.description}</p>`;
     return article;
   }));
 

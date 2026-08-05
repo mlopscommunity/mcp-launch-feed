@@ -27,11 +27,13 @@
     { "name": "Bluesky", "posts": 72, "impressions": "Not available", "engagements": "47", "role": "Smaller community updates" }
   ],
   "press": [
+    { "name": "Simon Willison", "description": "His post, “Stateless MCP has recaptured my interest,” explains why the new design makes MCP clients and servers easier to build.", "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/" },
     { "name": "VentureBeat", "description": "Focused on enterprise readiness, security, governance, and the Internet of Agents." },
     { "name": "Ars Technica", "description": "Explained the protocol update for a broad technical audience." },
     { "name": "The Register", "description": "Covered what the update means for enterprise IT and open source." },
     { "name": "Latent Space", "description": "Brought the release to AI engineers." },
-    { "name": "Ben's Bites + TLDR", "description": "Featured the launch in daily technology briefings." },
+    { "name": "Ben's Bites", "description": "Featured the launch in its daily AI briefing." },
+    { "name": "TLDR", "description": "Shared the update with its technology newsletter readers." },
     { "name": "Analysts", "description": "Discussed governance and stateless architecture." }
   ],
   "phase2": [
