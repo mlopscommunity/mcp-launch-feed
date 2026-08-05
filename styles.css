@@ -87,7 +87,7 @@ h1 em, .section-next h2 em { color: var(--accent); font-style: normal; }
 .model-ring strong { font-size: 1.6rem; letter-spacing: -0.04em; }
 .model-ring small { color: rgba(17, 16, 14, 0.68); font-size: 0.72rem; }
 .model-ring-one { top: 50px; left: 0; z-index: 1; background: var(--accent); }
-.model-ring-two { top: 176px; right: 0; z-index: 2; background: var(--lavender); }
+.model-ring-two { top: 176px; right: 0; z-index: 2; align-items: flex-end; padding-right: 28px; background: var(--lavender); text-align: right; }
 .model-ring-three { bottom: 0; left: 56px; z-index: 3; background: var(--acid); }
 
 .section { padding: 110px max(24px, calc((100vw - 1420px) / 2)); }
