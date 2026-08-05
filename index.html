@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Launch Week: the feed</title>
+  <meta name="description" content="The posts, blogs, and podcasts the community created for the MCP release of July 28, 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/aaif-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="https://aaif.io" aria-label="Agentic AI Foundation home">
+      <img src="assets/aaif-logo.svg" alt="Agentic AI Foundation" class="logo">
+    </a>
+    <div class="header-copy">
+      <p class="eyebrow">Community archive · July 28, 2026</p>
+      <h1>MCP Launch Week: the feed</h1>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel panel-left">
+      <p class="panel-kicker">What shipped</p>
+      <h2>The release</h2>
+      <p>The 2026-07-28 specification makes stateless operation the default shape of modern MCP. Each request carries the protocol metadata a server needs, so infrastructure can route work without relying on session affinity.</p>
+      <ul class="release-list">
+        <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Stateless protocol core</a> for simpler scaling behind gateways and load balancers.</li>
+        <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Multi round-trip requests</a> for elicitation and other interactive flows.</li>
+        <li><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">First-class extensions</a> with explicit capability negotiation.</li>
+        <li><a href="https://modelcontextprotocol.io/specification/2026-07-28/changelog">Routing and cache metadata</a> that works with ordinary web infrastructure.</li>
+      </ul>
+      <div class="source-links" aria-label="Release sources">
+        <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Release post</a>
+        <a href="https://modelcontextprotocol.io/specification/2026-07-28">Specification</a>
+        <a href="https://aaif.io/blog/mcp-is-growing-up/">AAIF analysis</a>
+      </div>
+    </aside>
+
+    <section class="feed-col" aria-labelledby="feed-heading">
+      <div class="feed-heading-row">
+        <div>
+          <p class="panel-kicker">From the community</p>
+          <h2 id="feed-heading">Launch coverage</h2>
+        </div>
+        <span id="result-count" class="result-count" aria-live="polite"></span>
+      </div>
+      <nav id="filters" aria-label="Filter posts">
+        <button data-filter="all" class="chip active" type="button">All</button>
+        <button data-filter="linkedin" class="chip" type="button">LinkedIn</button>
+        <button data-filter="x" class="chip" type="button">X</button>
+        <button data-filter="press" class="chip" type="button">Blogs and press</button>
+        <button data-filter="event" class="chip" type="button">Events</button>
+      </nav>
+      <div id="feed" aria-live="polite"></div>
+    </section>
+
+    <aside class="panel panel-right">
+      <p class="panel-kicker">One week, many voices</p>
+      <h2>How the community showed up</h2>
+      <div class="stats">
+        <div class="stat"><span id="stat-posts">0</span><label>posts and articles</label></div>
+        <div class="stat"><span id="stat-cities">5</span><label>cities with release events</label></div>
+        <div class="stat"><span id="stat-press">0</span><label>blogs, podcasts, and press</label></div>
+      </div>
+      <ol class="timeline">
+        <li><time>Jul 27</time><span>Pre-launch notes and event invitations</span></li>
+        <li><time>Jul 28</time><span>The specification and SDKs ship</span></li>
+        <li><time>Jul 28–29</time><span>Events in San Francisco, Seattle, New York, Amsterdam, and London</span></li>
+        <li><time>Jul 31+</time><span>Implementation notes and analyst follow-ups</span></li>
+      </ol>
+      <p class="tagline">Agentic AI Foundation: where the agentic stack is being built. <a href="https://aaif.io">aaif.io</a></p>
+    </aside>
+  </main>
+
+  <template id="card-template">
+    <article class="card">
+      <div class="card-head">
+        <img class="card-avatar" alt="">
+        <div class="card-identity">
+          <span class="card-author"></span>
+          <span class="card-headline"></span>
+          <span class="card-time"></span>
+        </div>
+        <span class="card-platform" aria-label=""></span>
+      </div>
+      <p class="card-text"></p>
+      <div class="card-media"></div>
+      <a class="card-link" target="_blank" rel="noopener">View original <span aria-hidden="true">↗</span></a>
+    </article>
+  </template>
+  <script src="app.js"></script>
+</body>
+</html>
