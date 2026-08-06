@@ -54,6 +54,33 @@ function renderImpact(impact) {
     return item;
   }));
 
+  const virtual = impact.virtual_event;
+  document.getElementById("virtual-event").innerHTML = `
+    <div>
+      <p class="eyebrow">Follow-up virtual event · ${virtual.date}</p>
+      <h3 id="virtual-event-title">${virtual.attendees} people stayed for ${virtual.duration}.</h3>
+      <p>${virtual.description}</p>
+      <small>With ${virtual.speakers}</small>
+    </div>
+    <dl>
+      <div><dt>${virtual.attendees}</dt><dd>people stayed online</dd></div>
+      <div><dt>${virtual.duration}</dt><dd>live discussion</dd></div>
+    </dl>`;
+
+  document.getElementById("cake-gallery").replaceChildren(...impact.cakes.map(cake => {
+    const figure = document.createElement("figure");
+    figure.className = "cake-card";
+    const image = document.createElement("img");
+    image.src = cake.image;
+    image.alt = cake.alt;
+    image.loading = "lazy";
+    image.decoding = "async";
+    const caption = document.createElement("figcaption");
+    caption.textContent = cake.city;
+    figure.append(image, caption);
+    return figure;
+  }));
+
   document.getElementById("press-grid").replaceChildren(...impact.press.map(item => {
     const article = document.createElement("article");
     const name = item.url
@@ -166,7 +193,7 @@ async function main() {
   try {
     const [postsResponse, impactResponse] = await Promise.all([
       fetch("data/posts.json"),
-      fetch("data/impact.json"),
+      fetch("data/impact.json?v=2"),
     ]);
     if (!postsResponse.ok || !impactResponse.ok) throw new Error("Data unavailable");
     const [{ posts }, impact] = await Promise.all([postsResponse.json(), impactResponse.json()]);

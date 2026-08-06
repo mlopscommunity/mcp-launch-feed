@@ -30,6 +30,12 @@ if (!impact.meta?.as_of || !/^https:\/\//.test(impact.meta?.source ?? "")) {
 }
 if (impact.metrics?.length !== 7) errors.push("impact must contain seven headline metrics");
 if (impact.events?.length !== 6) errors.push("impact must contain six event cities");
+if (impact.virtual_event?.attendees !== "100+" || impact.virtual_event?.duration !== "4 hours") {
+  errors.push("virtual event attendance/duration missing");
+}
+if (impact.cakes?.length !== 4 || impact.cakes.some(cake => !cake.image?.startsWith("assets/cakes/") || !cake.alt)) {
+  errors.push("cake gallery must contain four local images with alt text");
+}
 if (impact.channels?.reduce((sum, channel) => sum + channel.posts, 0) !== 247) {
   errors.push("impact channel post totals must equal 247");
 }

@@ -21,6 +21,20 @@
     { "city": "Seattle", "venue": "Microsoft Reactor", "registrations": 126, "attendees": "60+", "note": "Maintainers and practitioners covered production MCP systems." },
     { "city": "San Francisco", "venue": "Arcade.dev, MCPJam & Manufact", "registrations": 413, "attendees": null, "note": "Two launch events drew 413 RSVPs." }
   ],
+  "virtual_event": {
+    "date": "August 6",
+    "title": "MCP Community Livestream",
+    "attendees": "100+",
+    "duration": "4 hours",
+    "description": "More than 100 people stayed for a four-hour livestream about MCP servers, agent workflows, and production systems.",
+    "speakers": "Demetrios Brinkmann, Rahul Parundekar, and Leo Walker"
+  },
+  "cakes": [
+    { "city": "Launch week", "image": "assets/cakes/launch-week-cakes.jpg", "alt": "Two sheet cakes decorated for the MCP July 28 release" },
+    { "city": "London", "image": "assets/cakes/london-cake.jpg", "alt": "A round white MCP launch party cake being served in London" },
+    { "city": "New York", "image": "assets/cakes/new-york-cake.jpg", "alt": "A blue MCP launch party cake decorated with a New York illustration" },
+    { "city": "Seattle", "image": "assets/cakes/seattle-cake.jpg", "alt": "A chocolate MCP release party cake with colorful balloons" }
+  ],
   "channels": [
     { "name": "LinkedIn", "posts": 82, "impressions": "131,735", "engagements": "6,438", "role": "Enterprise and platform teams" },
     { "name": "X", "posts": 93, "impressions": "~66,000", "engagements": "2,814", "role": "Frequent, fast updates" },
